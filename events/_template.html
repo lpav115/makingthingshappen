@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      HOW TO ADD A NEW EVENT
+      1. Duplicate this file → events/your-event-slug.html
+      2. Replace all EVENT_* placeholders below
+      3. Add a tile on ../index.html and events/index.html linking to the new page
+      4. Drop photos into ../assets/photos/ and swap the .photo-slot divs for <img>
+    -->
+    <title>EVENT_TITLE — Making Things Happen</title>
+    <meta name="description" content="EVENT_META_DESCRIPTION" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="../index.html">
+          <img
+            class="logo-img"
+            src="../assets/logos/MTH/mth-logo-horizontal.png"
+            alt="Making Things Happen"
+            width="480" height="120"
+          />
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="index.html" aria-current="page">Events</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="event-banner">
+        <div class="container reveal">
+          <span class="event-tile-meta">Past event</span>
+          <h1>EVENT_TITLE</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="reveal prose-narrow">
+            <!-- PLACEHOLDER – REVIEW: intro blurb -->
+            <p>EVENT_INTRO_BLURB</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight-top">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">The panel</p>
+            <h2>EVENT_PANEL_HEADING</h2>
+          </div>
+          <ul class="panel-list reveal">
+            <li>
+              <span class="panel-name">PANELIST_NAME</span>
+              <span class="panel-role">PANELIST_ROLE</span>
+            </li>
+            <li>
+              <span class="panel-name">PANELIST_NAME</span>
+              <span class="panel-role">PANELIST_ROLE</span>
+            </li>
+            <!-- duplicate <li> as needed -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--tight-top">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">The room</p>
+            <h2>From the night</h2>
+            <p>Photos from the panel, breakouts, and networking.</p>
+          </div>
+          <div class="photo-gallery reveal">
+            <!-- ADD PHOTO -->
+            <div class="photo-slot">Photo</div>
+            <!-- ADD PHOTO -->
+            <div class="photo-slot">Photo</div>
+            <!-- ADD PHOTO -->
+            <div class="photo-slot">Photo</div>
+            <!-- ADD PHOTO -->
+            <div class="photo-slot">Photo</div>
+            <!-- ADD PHOTO -->
+            <div class="photo-slot">Photo</div>
+            <!-- ADD PHOTO -->
+            <div class="photo-slot">Photo</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight-top">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">Takeaways</p>
+            <h2>What students walked away with</h2>
+          </div>
+          <!-- PLACEHOLDER – REVIEW: takeaways -->
+          <div class="takeaways reveal">
+            <ul>
+              <li>TAKEAWAY_1</li>
+              <li>TAKEAWAY_2</li>
+              <li>TAKEAWAY_3</li>
+            </ul>
+          </div>
+          <p class="reveal back-link">
+            <a href="index.html">← All events</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a class="logo" href="../index.html">
+          <img
+            class="logo-img"
+            src="../assets/logos/MTH/mth-logo-horizontal.png"
+            alt="Making Things Happen"
+            width="480" height="120"
+          />
+        </a>
+          <p class="footer-copy">A non-profit by University of Waterloo alumni.</p>
+        </div>
+        <p class="footer-contact">
+          Contact:
+          <a href="mailto:hello@makingthingshappen.ca">hello@makingthingshappen.ca</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
