@@ -455,28 +455,13 @@ p {
   margin-bottom: 0.5rem;
 }
 
-/* —— Values (mountain band + numbered columns) —— */
+/* —— Values (numbered columns — distinct from event tiles) —— */
 .section--values {
   position: relative;
   padding: 5rem 0 4.75rem;
   overflow: hidden;
   border: none;
-  background: var(--navy-deep);
-}
-
-.section-values-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(11, 18, 32, 0.62) 0%,
-      rgba(11, 18, 32, 0.78) 50%,
-      rgba(11, 18, 32, 0.92) 100%
-    ),
-    radial-gradient(ellipse 70% 45% at 75% 15%, rgba(232, 130, 60, 0.2) 0%, transparent 55%),
-    url("../assets/mth-background.png") center 35% / cover no-repeat;
-  z-index: 0;
+  background: var(--navy);
 }
 
 .section-values-inner {
