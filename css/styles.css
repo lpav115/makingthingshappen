@@ -588,8 +588,8 @@ p {
 .event-tile {
   display: flex;
   flex-direction: column;
-  min-height: 16rem;
-  padding: 1.5rem;
+  padding: 0;
+  overflow: hidden;
   background: linear-gradient(160deg, var(--blue-soft) 0%, var(--navy) 100%);
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -602,6 +602,31 @@ p {
   color: var(--text);
   border-color: rgba(224, 122, 69, 0.45);
   transform: translateY(-3px);
+}
+
+.event-tile-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+
+.event-tile-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s var(--ease);
+}
+
+.event-tile:hover .event-tile-media img {
+  transform: scale(1.04);
+}
+
+.event-tile-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.35rem 1.4rem 1.5rem;
 }
 
 .event-tile.is-placeholder {
