@@ -272,7 +272,7 @@ p {
 /* —— Hero (event photo collage + overlaid copy) —— */
 .hero {
   position: relative;
-  min-height: min(52vh, 460px);
+  min-height: min(64vh, 560px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -310,15 +310,15 @@ p {
   background:
     linear-gradient(
       180deg,
-      rgba(11, 18, 32, 0.5) 0%,
-      rgba(11, 18, 32, 0.72) 45%,
-      rgba(11, 18, 32, 0.88) 100%
+      rgba(11, 18, 32, 0.72) 0%,
+      rgba(11, 18, 32, 0.82) 45%,
+      rgba(11, 18, 32, 0.9) 100%
     ),
     linear-gradient(
       90deg,
-      rgba(11, 18, 32, 0.45) 0%,
-      rgba(11, 18, 32, 0.25) 50%,
-      rgba(11, 18, 32, 0.4) 100%
+      rgba(11, 18, 32, 0.55) 0%,
+      rgba(11, 18, 32, 0.4) 50%,
+      rgba(11, 18, 32, 0.5) 100%
     );
   pointer-events: none;
 }
@@ -328,7 +328,7 @@ p {
   z-index: 2;
   width: min(100% - 2.5rem, var(--max));
   margin: 0 auto;
-  padding: 1.75rem 0 2rem;
+  padding: 3rem 0 3.25rem;
 }
 
 @media (max-width: 900px) {
@@ -344,7 +344,7 @@ p {
 
 @media (max-width: 700px) {
   .hero {
-    min-height: min(48vh, 400px);
+    min-height: min(58vh, 480px);
   }
 
   .hero-collage-grid {
@@ -357,7 +357,7 @@ p {
   }
 
   .hero-content {
-    padding: 1.35rem 0 1.5rem;
+    padding: 2.25rem 0 2.5rem;
   }
 }
 
