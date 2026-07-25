@@ -2,6 +2,9 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/events/index.html", "destination": "/events", "permanent": true }
+    { "source": "/events/index.html", "destination": "/events", "permanent": true },
+    { "source": "/careers-in-business", "destination": "/events/careers-in-business", "permanent": true },
+    { "source": "/trailblazers-in-business", "destination": "/events/trailblazers-in-business", "permanent": true },
+    { "source": "/careers-in-business-brampton", "destination": "/events/careers-in-business-brampton", "permanent": true }
   ]
 }
