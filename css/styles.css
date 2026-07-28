@@ -763,21 +763,97 @@ p {
 /* —— Event recap —— */
 .event-banner {
   position: relative;
-  min-height: 280px;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232, 130, 60, 0.4) 0%, transparent 60%),
-    linear-gradient(180deg, var(--blue-mid) 0%, var(--navy-deep) 100%);
-  border-bottom: 1px solid var(--border);
+  min-height: min(52vh, 480px);
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
+  background: var(--navy-deep);
+  border-bottom: 1px solid var(--border);
 }
 
-.event-banner .container {
-  padding: 3rem 0 2.5rem;
+.event-banner-media {
+  position: absolute;
+  inset: 0;
+}
+
+.event-banner-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transform: scale(1.04);
+  animation: event-banner-drift 18s var(--ease) infinite alternate;
+}
+
+.event-banner--crowd .event-banner-media img {
+  object-position: center 45%;
+}
+
+@keyframes event-banner-drift {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-banner-media img {
+    animation: none;
+    transform: none;
+  }
+}
+
+.event-banner-fade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11, 18, 32, 0.35) 0%,
+      rgba(11, 18, 32, 0.55) 45%,
+      rgba(11, 18, 32, 0.92) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 18, 32, 0.55) 0%,
+      rgba(11, 18, 32, 0.2) 60%,
+      rgba(11, 18, 32, 0.35) 100%
+    );
+  pointer-events: none;
+}
+
+.event-banner-content {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2.5rem, var(--max));
+  margin: 0 auto;
+  padding: 4rem 0 2.75rem;
 }
 
 .event-banner .event-tile-meta {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
+  display: inline-block;
+}
+
+.event-banner h1 {
+  max-width: 18ch;
+  font-size: clamp(2.15rem, 5.5vw, 3.75rem);
+  line-height: 1.08;
+  margin: 0;
+  text-wrap: balance;
+}
+
+@media (max-width: 700px) {
+  .event-banner {
+    min-height: min(44vh, 380px);
+  }
+
+  .event-banner-content {
+    padding: 3rem 0 2.25rem;
+  }
 }
 
 .panel-list {
@@ -867,29 +943,78 @@ p {
   display: block;
 }
 
-.takeaways {
-  background: var(--navy);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 1.75rem 1.5rem;
+.section--takeaways {
+  padding: 3.75rem 0 3.5rem;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 50%, rgba(224, 122, 69, 0.1) 0%, transparent 55%),
+    var(--navy);
+  border-top: 1px solid var(--border);
 }
 
-.takeaways ul {
+.section--takeaways .section-header {
+  margin-bottom: 1.75rem;
+}
+
+.section--takeaways .section-header h2 {
+  font-size: clamp(1.65rem, 3.2vw, 2.25rem);
+  max-width: 16ch;
+}
+
+.takeaways {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  max-width: 44rem;
+}
+
+.takeaways ol {
+  list-style: none;
+  counter-reset: takeaway;
   margin: 0;
-  padding-left: 1.25rem;
-  color: var(--text-muted);
+  padding: 0;
 }
 
 .takeaways li {
-  margin-bottom: 0.5rem;
+  counter-increment: takeaway;
+  display: grid;
+  grid-template-columns: 3.25rem 1fr;
+  gap: 0.4rem 1.15rem;
+  align-items: start;
+  margin: 0;
+  padding: 1.15rem 0;
+  border-top: 1px solid rgba(242, 244, 248, 0.14);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
 .takeaways li:last-child {
-  margin-bottom: 0;
+  border-bottom: 1px solid rgba(242, 244, 248, 0.14);
+}
+
+.takeaways li::before {
+  content: counter(takeaway, decimal-leading-zero);
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 560px) {
+  .takeaways li {
+    grid-template-columns: 2.75rem 1fr;
+    gap: 0.35rem 0.85rem;
+    padding: 1rem 0;
+  }
 }
 
 .back-link {
-  margin-top: 2rem;
+  margin-top: 1.75rem;
   color: var(--text-muted);
 }
 

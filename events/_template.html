@@ -39,8 +39,13 @@
 
     <main>
       <section class="event-banner">
-        <div class="container reveal">
-          <span class="event-tile-meta">Past event</span>
+        <div class="event-banner-media" aria-hidden="true">
+          <!-- EVENT_BANNER_PHOTO: replace src with a hero shot from the night -->
+          <img src="../assets/photos/EVENT_SLUG/hero.jpg" alt="" loading="eager" />
+        </div>
+        <div class="event-banner-fade" aria-hidden="true"></div>
+        <div class="event-banner-content reveal">
+          <span class="event-tile-meta">EVENT_DATE</span>
           <h1>EVENT_TITLE</h1>
         </div>
       </section>
@@ -76,8 +81,7 @@
       <section class="section section--tight-top">
         <div class="container">
           <div class="section-header reveal">
-            <h2>From the night</h2>
-            <p>Photos from the panel, breakouts, and networking.</p>
+            <h2>Highlights of the night</h2>
           </div>
           <div class="photo-gallery reveal">
             <!-- ADD PHOTO -->
@@ -96,18 +100,18 @@
         </div>
       </section>
 
-      <section class="section section--tight-top">
+      <section class="section section--takeaways">
         <div class="container">
           <div class="section-header reveal">
             <h2>What students walked away with</h2>
           </div>
           <!-- PLACEHOLDER – REVIEW: takeaways -->
           <div class="takeaways reveal">
-            <ul>
+            <ol>
               <li>TAKEAWAY_1</li>
               <li>TAKEAWAY_2</li>
               <li>TAKEAWAY_3</li>
-            </ul>
+            </ol>
           </div>
           <p class="reveal back-link">
             <a href="/events">← All events</a>
