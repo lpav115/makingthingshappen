@@ -790,6 +790,10 @@ p {
   object-position: center 45%;
 }
 
+.event-banner--audience .event-banner-media img {
+  object-position: center 78%;
+}
+
 @keyframes event-banner-drift {
   from {
     transform: scale(1.04) translate3d(0, 0, 0);
